@@ -1,4 +1,4 @@
-from clinet import PubSubClient
+from pubsubx import PubSubClient
 import time
 
 def on_message(topic, message):
@@ -15,12 +15,11 @@ client.on_message(on_message)
 client.subscribe("test_topic")
 
 # Publish a message
-client.publish("test_topic", "Hello, PubSub!")
+client.publish("test_topic", "Hello, SimplePubSub!")
 
 # Keep the script running
 try:
     while True:
-        client.publish("test_topic", "Hello, PubSub!")
         time.sleep(1)
 except KeyboardInterrupt:
     print("Disconnecting...")

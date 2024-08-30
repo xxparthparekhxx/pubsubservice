@@ -1,7 +1,6 @@
 import socket
 import threading
 import json
-import sys
 
 class PubSubServer:
     def __init__(self, host='localhost', port=5000):
@@ -85,6 +84,9 @@ class PubSubServer:
         self.server_socket.close()
         print("Server shut down")
 
-if __name__ == "__main__":
-    server = PubSubServer(host="0.0.0.0")
+def run_server():
+    server = PubSubServer()
     server.start()
+
+if __name__ == "__main__":
+    run_server()
