@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="pubsubx",
-    version="0.1.0",
+    version="0.1.1",
     author="xxparthparekhxx",
     author_email="xx.parthparekh.xx@gmail.com",
     description="A publish-subscribe messaging system",

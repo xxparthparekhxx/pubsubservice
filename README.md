@@ -1,23 +1,23 @@
-# SimplePubSub
+# pubsubx
 
-SimplePubSub is a lightweight publish-subscribe messaging system implemented in Python. It provides a simple server and client for building distributed messaging applications.
+pubsubx is a lightweight publish-subscribe messaging system implemented in Python. It provides a simple server and client for building distributed messaging applications.
 
 ## Installation
 
-You can install SimplePubSub using pip:
+You can install pubsubx using pip:
 
 ```
-pip install simplepubsub
+pip install pubsubx
 ```
 
 ## Usage
 
 ### Starting the server
 
-To start the SimplePubSub server:
+To start the pubsubx server:
 
 ```python
-from simplepubsub import PubSubServer
+from pubsubx import PubSubServer
 
 server = PubSubServer()
 server.start()
@@ -25,10 +25,10 @@ server.start()
 
 ### Using the client
 
-Here's a simple example of how to use the SimplePubSub client:
+Here's a simple example of how to use the pubsubx client:
 
 ```python
-from simplepubsub import PubSubClient
+from pubsubx import PubSubClient
 import time
 
 def on_message(topic, message):
@@ -45,7 +45,7 @@ client.on_message(on_message)
 client.subscribe("test_topic")
 
 # Publish a message
-client.publish("test_topic", "Hello, SimplePubSub!")
+client.publish("test_topic", "Hello, pubsubx!")
 
 # Keep the script running
 try:
