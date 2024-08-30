@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="pubsubx",
-    version="0.1.1",
+    version="0.1.2",
     author="xxparthparekhxx",
     author_email="xx.parthparekh.xx@gmail.com",
     description="A publish-subscribe messaging system",
@@ -25,4 +25,9 @@ setup(
         "Programming Language :: Python :: 3.9",
     ],
     python_requires=">=3.6",
+    entry_points={
+        "console_scripts": [
+            "pubsubx=pubsubx.__main__:main",
+        ],
+    },
 )
